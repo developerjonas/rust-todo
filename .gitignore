@@ -32,8 +32,4 @@ yarn-error.log*
 .vercel
 
 
-# rust
 
-/roust/target
-**/*.rs.bk
-/rust/Cargo.lock
