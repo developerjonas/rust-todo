@@ -93,10 +93,10 @@ async fn main() -> std::io::Result<()> {
             .wrap(cors)
             .route("/todos", web::get().to(get_todos))
             .route("/todos", web::post().to(add_todo))
-            .route("/todos{id}", web::put().to(update_todo))
-            .route("/todos{id}", web::delete().to(delete_todo))
+            .route("/todos/{id}", web::put().to(update_todo))
+            .route("/todos/{id}", web::delete().to(delete_todo))
     })
-    .bind("127.0.0.1:8000")?
+    .bind("127.0.0.1:8080")?
     .run()
     .await
 }
